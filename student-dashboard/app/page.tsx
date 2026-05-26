@@ -9,6 +9,9 @@ import CourseCard from "../components/dashboard/course-card";
 import MotionWrapper from "../components/ui/motion-wrapper";
 
 export default async function Home() {
+  await new Promise((resolve) =>
+  setTimeout(resolve, 2000)
+  );
   const { data: courses, error } = await supabase
     .from("courses")
     .select("*");
@@ -23,7 +26,7 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen p-4 lg:p-6">
-      <section className="grid gap-6 lg:grid-cols-[240px_1fr]">
+      <section className="grid gap-6 md:grid-cols-[90px_1fr] lg:grid-cols-[240px_1fr]">
 
         <Sidebar />
 
