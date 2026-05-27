@@ -9,9 +9,7 @@ import CourseCard from "../components/dashboard/course-card";
 import MotionWrapper from "../components/ui/motion-wrapper";
 
 export default async function Home() {
-  await new Promise((resolve) =>
-  setTimeout(resolve, 2000)
-  );
+  
   const { data: courses, error } = await supabase
     .from("courses")
     .select("*");
@@ -30,24 +28,32 @@ export default async function Home() {
 
         <Sidebar />
 
-        <section className="grid auto-rows-[180px] gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <section className="space-y-5">
 
-          <MotionWrapper delay={0.1}>
-            <HeroTile />
-          </MotionWrapper>
+          <section className="grid auto-rows-[320px] grid-cols-1 gap-5 xl:grid-cols-[0.9fr_1.1fr]">
 
-          {courses?.map((course, index) => (
-            <MotionWrapper
-              key={course.id}
-              delay={0.2 + index * 0.1}
-            >
-              <CourseCard course={course} />
+            <MotionWrapper delay={0.1}>
+              <HeroTile />
             </MotionWrapper>
-          ))}
 
-          <MotionWrapper delay={0.6}>
-            <ActivityTile />
-          </MotionWrapper>
+            <MotionWrapper delay={0.2}>
+              <ActivityTile />
+            </MotionWrapper>
+
+          </section>
+
+          <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+
+            {courses?.map((course, index) => (
+              <MotionWrapper
+                key={course.id}
+                delay={0.3 + index * 0.1}
+              >
+                <CourseCard course={course} />
+              </MotionWrapper>
+            ))}
+
+          </section>
 
         </section>
       </section>
