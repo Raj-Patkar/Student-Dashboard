@@ -1,10 +1,10 @@
-# 🚀 Next-Gen Learning Dashboard
+#  Next-Gen Learning Dashboard
 
-A futuristic student learning dashboard built with **Next.js App Router**, **Supabase**, **Tailwind CSS**, and **Framer Motion** as part of the Frontend Intern Challenge. The project focuses on high-performance UI interactions, responsive Bento-grid layouts, smooth animations, and server-rendered data fetching. :contentReference[oaicite:0]{index=0}
+A futuristic student learning dashboard built with **Next.js App Router**, **Supabase**, **Tailwind CSS**, and **Framer Motion** as part of the Frontend Intern Challenge. The project focuses on high-performance UI interactions, responsive Bento-grid layouts, smooth animations, and server-rendered data fetching.
 
 ---
 
-# ✨ Features
+#  Features
 
 - Responsive Bento Grid dashboard layout
 - Dynamic course data fetched from Supabase
@@ -20,7 +20,7 @@ A futuristic student learning dashboard built with **Next.js App Router**, **Sup
 
 ---
 
-# 🛠️ Tech Stack
+#  Tech Stack
 
 - **Framework:** Next.js (App Router)
 - **Database:** Supabase PostgreSQL
@@ -31,7 +31,7 @@ A futuristic student learning dashboard built with **Next.js App Router**, **Sup
 
 ---
 
-# 🧱 Architecture Decisions
+#  Architecture Decisions
 
 ## Server Components for Data Fetching
 
@@ -47,7 +47,7 @@ The course data is fetched before rendering the page, allowing the dashboard to 
 
 ---
 
-# 🔄 Server / Client Component Split
+#  Server / Client Component Split
 
 ## Server Components
 Used for:
@@ -67,7 +67,7 @@ This separation helped keep the application performant while still supporting ri
 
 ---
 
-# 🎨 UI & Animation Approach
+#  UI & Animation Approach
 
 The dashboard follows a dark futuristic design system using:
 - Deep blue/black backgrounds
@@ -88,7 +88,6 @@ To avoid layout shifts, all hover interactions use:
 - `opacity`
 - `scale`
 
-instead of changing dimensions or spacing. :contentReference[oaicite:1]{index=1}
 
 ---
 
@@ -123,7 +122,7 @@ instead of changing dimensions or spacing. :contentReference[oaicite:1]{index=1}
 
 ---
 
-# ⚡ Loading States & Error Handling
+#  Loading States & Error Handling
 
 A custom `loading.tsx` skeleton screen was created to mirror the final Bento layout while data loads.
 
@@ -137,7 +136,7 @@ Graceful error handling was also implemented for failed Supabase connections.
 
 ---
 
-# 🚧 Challenges Faced
+#  Challenges Faced
 
 ## 1. Building a Responsive Bento Grid
 One of the biggest challenges was maintaining a clean Bento layout across desktop, tablet, and mobile breakpoints without creating uneven spacing or broken card flow.
@@ -151,8 +150,7 @@ The activity contribution graph became compressed on smaller screens. The soluti
 - Responsive cell sizing
 - Horizontal scrolling fallback on mobile
 
-## 4. Matching Skeleton Layouts
-The loading skeleton originally did not match the evolved Bento structure. A dedicated skeleton layout was redesigned to accurately mirror the final dashboard UI.
+
 
 ---
 
